@@ -1,1 +1,1 @@
-# wakacje-licznik.pl
+# http://wakacje-licznik.pl
