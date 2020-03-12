@@ -1,0 +1,1 @@
+# wakacje-licznik.pl
