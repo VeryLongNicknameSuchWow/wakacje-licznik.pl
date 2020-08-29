@@ -4,11 +4,13 @@ import kotlin.browser.window
 import kotlin.js.Date
 
 fun start() {
-    Counter.CounterDate(Date(2019, 5, 19), Counter.CounterDate.Type.HOLIDAYS)
-    Counter.CounterDate(Date(2019, 8, 2), Counter.CounterDate.Type.SCHOOL)
     Counter.CounterDate(Date(2020, 5, 26), Counter.CounterDate.Type.HOLIDAYS)
     Counter.CounterDate(Date(2020, 8, 1), Counter.CounterDate.Type.SCHOOL)
     Counter.CounterDate(Date(2021, 5, 25), Counter.CounterDate.Type.HOLIDAYS)
+    Counter.CounterDate(Date(2021, 8, 1), Counter.CounterDate.Type.SCHOOL)
+    Counter.CounterDate(Date(2022, 5, 24), Counter.CounterDate.Type.HOLIDAYS)
+    Counter.CounterDate(Date(2022, 8, 1), Counter.CounterDate.Type.SCHOOL)
+    Counter.CounterDate(Date(2023, 5, 23), Counter.CounterDate.Type.HOLIDAYS)
 
     window.setInterval("this['wakacje-licznik'].update();", 10)
 }
