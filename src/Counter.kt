@@ -32,7 +32,8 @@ object Counter {
 
         enum class Type {
             HOLIDAYS,
-            SCHOOL
+            SCHOOL,
+            CORONAVIRUS
         }
 
         companion object {

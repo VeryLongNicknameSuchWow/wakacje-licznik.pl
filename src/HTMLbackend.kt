@@ -17,6 +17,7 @@ fun update() {
     document.getElementById("header")?.innerHTML = when (Counter.CounterDate.closestFutureDate().type) {
         Counter.CounterDate.Type.HOLIDAYS -> "Wakacje!"
         Counter.CounterDate.Type.SCHOOL -> "Koniec wakacji..."
+        Counter.CounterDate.Type.CORONAVIRUS -> "Koniec koronaferii..."
     }
 
     document.getElementById("mainCounter")?.innerHTML = "Już za... " +
