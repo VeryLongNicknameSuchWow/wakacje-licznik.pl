@@ -1,6 +1,6 @@
+import kotlinx.browser.document
+import kotlinx.browser.window
 import org.w3c.dom.HTMLProgressElement
-import kotlin.browser.document
-import kotlin.browser.window
 import kotlin.js.Date
 
 fun start() {
@@ -32,11 +32,16 @@ fun update() {
             Counter.s(true) +
             Conjugator.conjugate(Conjugator.Word.SEKUNDA, Counter.s(true), true)
 
-    document.getElementById("weeks")?.innerHTML = Counter.w().format(6) + Conjugator.conjugate(Conjugator.Word.TYDZIEN, Counter.w(), false)
-    document.getElementById("days")?.innerHTML = Counter.d().format(5) + Conjugator.conjugate(Conjugator.Word.DZIEN, Counter.d(), false)
-    document.getElementById("hours")?.innerHTML = Counter.h().format(4) + Conjugator.conjugate(Conjugator.Word.GODZINA, Counter.h(), false)
-    document.getElementById("minutes")?.innerHTML = Counter.m().format(3) + Conjugator.conjugate(Conjugator.Word.MINUTA, Counter.m(), false)
-    document.getElementById("seconds")?.innerHTML = Counter.s().format(2) + Conjugator.conjugate(Conjugator.Word.SEKUNDA, Counter.s(), false)
+    document.getElementById("weeks")?.innerHTML = Counter.w().format(6) +
+            Conjugator.conjugate(Conjugator.Word.TYDZIEN, Counter.w(), false)
+    document.getElementById("days")?.innerHTML = Counter.d().format(5) +
+            Conjugator.conjugate(Conjugator.Word.DZIEN, Counter.d(), false)
+    document.getElementById("hours")?.innerHTML = Counter.h().format(4) +
+            Conjugator.conjugate(Conjugator.Word.GODZINA, Counter.h(), false)
+    document.getElementById("minutes")?.innerHTML = Counter.m().format(3) +
+            Conjugator.conjugate(Conjugator.Word.MINUTA, Counter.m(), false)
+    document.getElementById("seconds")?.innerHTML = Counter.s().format(2) +
+            Conjugator.conjugate(Conjugator.Word.SEKUNDA, Counter.s(), false)
 
     document.getElementById("percentage")?.innerHTML = Counter.percentage().format(2) + "%"
     val progress = document.getElementById("progress") as HTMLProgressElement
