@@ -8,43 +8,43 @@ object Conjugator {
 
         if (rounded == 0 && mainCounter) {
             return when (word) {
-                Conjugator.Word.SEKUNDA -> " sekund "
-                Conjugator.Word.MINUTA -> " minut "
-                Conjugator.Word.GODZINA -> " godzin "
-                Conjugator.Word.DZIEN -> " dni "
-                Conjugator.Word.TYDZIEN -> "tygodni "
+                Word.SEKUNDA -> " sekund "
+                Word.MINUTA -> " minut "
+                Word.GODZINA -> " godzin "
+                Word.DZIEN -> " dni "
+                Word.TYDZIEN -> "tygodni "
             }
         } else if (rounded == 0 && !mainCounter) {
             return when (word) {
-                Conjugator.Word.SEKUNDA -> " sekundy "
-                Conjugator.Word.MINUTA -> " minuty "
-                Conjugator.Word.GODZINA -> " godziny "
-                Conjugator.Word.DZIEN -> " dnia "
-                Conjugator.Word.TYDZIEN -> " tygodnia "
+                Word.SEKUNDA -> " sekundy "
+                Word.MINUTA -> " minuty "
+                Word.GODZINA -> " godziny "
+                Word.DZIEN -> " dnia "
+                Word.TYDZIEN -> " tygodnia "
             }
         } else if (rounded == 1) {
             return when (word) {
-                Conjugator.Word.SEKUNDA -> " sekundę "
-                Conjugator.Word.MINUTA -> " minutę "
-                Conjugator.Word.GODZINA -> " godzinę "
-                Conjugator.Word.DZIEN -> " dzień "
-                Conjugator.Word.TYDZIEN -> " tydzień "
+                Word.SEKUNDA -> " sekundę "
+                Word.MINUTA -> " minutę "
+                Word.GODZINA -> " godzinę "
+                Word.DZIEN -> " dzień "
+                Word.TYDZIEN -> " tydzień "
             }
         } else if ((lastDigit in 2..4) && (lastTwoDigits > 20 || lastTwoDigits < 10)) {
             return when (word) {
-                Conjugator.Word.SEKUNDA -> " sekundy "
-                Conjugator.Word.MINUTA -> " minuty "
-                Conjugator.Word.GODZINA -> " godziny "
-                Conjugator.Word.DZIEN -> " dni "
-                Conjugator.Word.TYDZIEN -> " tygodnie "
+                Word.SEKUNDA -> " sekundy "
+                Word.MINUTA -> " minuty "
+                Word.GODZINA -> " godziny "
+                Word.DZIEN -> " dni "
+                Word.TYDZIEN -> " tygodnie "
             }
         } else {
             return when (word) {
-                Conjugator.Word.SEKUNDA -> " sekund "
-                Conjugator.Word.MINUTA -> " minut "
-                Conjugator.Word.GODZINA -> " godzin "
-                Conjugator.Word.DZIEN -> " dni "
-                Conjugator.Word.TYDZIEN -> " tygodni "
+                Word.SEKUNDA -> " sekund "
+                Word.MINUTA -> " minut "
+                Word.GODZINA -> " godzin "
+                Word.DZIEN -> " dni "
+                Word.TYDZIEN -> " tygodni "
             }
         }
     }
